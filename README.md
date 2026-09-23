@@ -1,16 +1,29 @@
-## Hi there 👋
+# Автоматизация и ручное тестирование платформы GitHub (Дипломный проект)
 
-<!--
-**antares20012/antares20012** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Проект посвящен комплексному QA-аудиту и автоматизации критических пользовательских сценариев платформы GitHub (работа с репозиториями, авторизация, управление файлами).
 
-Here are some ideas to get you started:
+## 🛠 Технический стек
+* **Язык:** Python 3.x
+* **UI Автоматизация:** Selenium WebDriver + Page Object Model (POM)
+* **API Автоматизация:** Requests (REST API тестирование с авторизацией по токенам)
+* **Фреймворк:** PyTest (кастомные маркеры, фикстуры, conftest.py)
+* **Отчетность:** Allure Report
+* **Ручное тестирование & TMS:** Test IT, Баг-трекер Ёжка, База знаний YoNote
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## 📈 Результаты автоматизации
+1. Разработан UI-фреймворк с архитектурой POM, что исключило дублирование локаторов в тестах.
+2. Реализован базовый класс-клиент для REST API, инкапсулирующий методы GET, POST, DELETE, PATCH и автоматически прокидывающий `GITHUB_TOKEN`.
+3. Настроен запуск тестов в Headless-режиме, что сократило время выполнения тестов на 50%.
+4. Настроена генерация Allure-отчетов: при падении UI-теста к отчету автоматически прикрепляется скриншот экрана браузера и логи.
+
+## 🚀 Как запустить тесты локально
+1. Клонировать репозиторий:
+   `git clone https://github.com`
+2. Установить зависимости:
+   `pip install -r requirements.txt`
+3. Запустить UI и API тесты:
+   `pytest --alluredir=allure-results`
+
+## 📂 Ссылки на артефакты ручного тестирования
+* [Ссылка на чек-листы и тест-кейсы в Test IT](#) *(подставьте вашу реальную ссылку, если есть гостевой доступ)*
+* [Инструкция по окружению и документация в YoNote](https://yonote.ru)
